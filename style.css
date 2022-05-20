@@ -107,20 +107,24 @@
 
 .ex-10-icon {
     font-size: 60px;
-    animation: rotation 5s infinite linear;
+    animation: rotation 3s infinite linear;
 }
 
 @keyframes rotation {
-    from {
+    0% {
         transform: rotate(0deg);
     }
 
-    to {
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100%{
         transform: rotate(360deg);
     }
 }
 
-.ex-11-icon {
+.ex-11-icon:hover {
     font-size: 60px;
     animation: rotation-2 1.5s infinite linear;
 }
@@ -148,19 +152,110 @@
 
 }
 
-.ex-12-button:hover {
-    animation: rotation-3 1s linear;
+.ex-12-button:hover .ex-12-top-white {
+    animation: rotation-3 5s linear;
+
 }
 
 @keyframes rotation-3 {
     0% {
-        top: 0;
-        left: 0;
+        left: 10%;
+    }
+
+    50% {
+        left: calc(100% - 60px);
     }
 
     100% {
-        left: calc(100% -200px);
-        top: calc(100% -70px);
+        left: 10%;
+    }
+
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: rotation-4 5s linear;
+
+}
+
+@keyframes rotation-4 {
+    0% {
+        right: 20%;
+    }
+
+    50% {
+        right: calc(100% - 60px);
+    }
+
+    100% {
+        right: 20%;
+    }
+
+}
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: rotation-5 3s forwards 3;
+
+}
+
+@keyframes rotation-5 {
+    0% {
+        left: 0%;
+    }
+
+    25% {
+        top: -10px;
+        left: calc(100% - 30px);
+    }
+
+    50% {
+        left: calc(100% - 30px);
+        top: calc(100% - 10px);
+    }
+
+    75% {
+        top: calc(100% - 10px);
+        left: calc(0% - 30px);
+    }
+    
+    100% {
+        left: calc(0% - 30px);
+        top: -10px;
+
+    }
+
+
+
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: rotation-6 3s forwards 3;
+
+}
+
+@keyframes rotation-6 {
+    0% {
+        right: 0%;
+    }
+
+    25% {
+        bottom: -10px;
+        right: calc(100% - 30px);
+    }
+
+    50% {
+        right: calc(100% - 30px);
+        bottom: calc(100% - 10px);
+    }
+
+    75% {
+        bottom: calc(100% - 10px);
+        right: calc(0% - 30px);
+    }
+    
+    100% {
+        right: calc(0% - 30px);
+        bottom: -10px;
+
     }
 
 
@@ -180,7 +275,6 @@
     line-height: 70px;
     text-align: center;
     text-decoration: none;
-    transition: 2s linear;
 }
 
 .ex-12-top-white,
@@ -188,7 +282,7 @@
     position: absolute;
     top: -10px;
     left: 10%;
-    background: #f5f5f5;
+    background: #000000;
     width: 60px;
     height: 20px;
 }
@@ -198,7 +292,7 @@
     position: absolute;
     bottom: -10px;
     right: 20%;
-    background: #f5f5f5;
+    background: #000000;
     width: 60px;
     height: 20px;
 }
