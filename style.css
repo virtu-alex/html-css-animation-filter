@@ -35,7 +35,7 @@
     width: 100px;
     height: 100px;
     background: red;
-    transition: 2s linear;;
+    transition: 2s linear;
 }
 
 .ex-4-square:hover {
@@ -110,41 +110,63 @@
     animation: rotation 5s infinite linear;
 }
 
-@keyframes rotation{
-from{
-transform: rotate(0deg);
-}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
 
-to{
-transform: rotate(360deg);
-}
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .ex-11-icon {
     font-size: 60px;
-    animation: rotation-2 2s infinite linear;
+    animation: rotation-2 1.5s infinite linear;
 }
 
-@keyframes rotation-2{
-0%{
-transform: rotate(0deg);
+@keyframes rotation-2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
 }
 
-25%{
-transform: rotate(90deg);
-}
-50%{
-transform: rotate(180deg);
-}
-75%{
-transform: rotate(270deg);
+.ex-12-button:hover {
+    animation: rotation-3 1s linear;
 }
 
-100%{
-    transform: rotate(0deg);
-}
+@keyframes rotation-3 {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    100% {
+        left: calc(100% -200px);
+        top: calc(100% -70px);
+    }
+
+
 
 }
+
 .ex-12-button,
 .ex-13-button {
     position: relative;
@@ -158,6 +180,7 @@ transform: rotate(270deg);
     line-height: 70px;
     text-align: center;
     text-decoration: none;
+    transition: 2s linear;
 }
 
 .ex-12-top-white,
